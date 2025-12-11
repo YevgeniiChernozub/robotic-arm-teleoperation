@@ -1,0 +1,42 @@
+   ┌────────────────────────────────────┐
+                          │        WEARABLE INPUT MODULE       │
+                          │        (Smart Control Shirt)       │
+                          └────────────────────────────────────┘
+                                       │
+             ┌─────────────────────────┼─────────────────────────┐
+             │                         │                         │
+             ▼                         ▼                         ▼
+   ┌────────────────┐       ┌────────────────────┐      ┌──────────────────┐
+   │  Bend Sensors  │       │  Touch Interface   │      │     MCU Unit     │
+   │ (Flex Inputs)  │       │ (Capacitive Panel) │      │ (Data Processing │
+   │  Motion Data   │       │ Mode & Command UI  │      │  & Wireless TX)  │
+   └────────────────┘       └────────────────────┘      └──────────────────┘
+             \_______________________   ________________________/   
+                                     \ /
+                                      ▼
+                           Wireless Communication
+                             (BLE / 2.4GHz RF)
+                                      │
+                                      ▼
+                   ┌─────────────────────────────────────────┐
+                   │          REMOTE ROBOTIC PLATFORM        │
+                   │                 (Chassis)                │
+                   └─────────────────────────────────────────┘
+                                      │
+       ┌──────────────────────────────┼──────────────────────────────┐
+       │                              │                              │
+       ▼                              ▼                              ▼
+┌──────────────────┐       ┌────────────────────────┐     ┌───────────────────────┐
+│   Motor Driver   │       │  Main Control Board    │     │ Raspberry Pi (Camera) │
+│  Motors + PID    │       │ (Arduino/STM32 Logic)  │     │  Video Capture &      │
+└──────────────────┘       └────────────────────────┘     │   Internet Streaming  │
+                                                          └───────────────────────┘
+                                                                    │
+                                                                    ▼
+                                                         Internet Connection (Wi-Fi)
+                                                                    │
+                                                                    ▼
+                                            ┌────────────────────────────────────────┐
+                                            │      SMARTPHONE IN VR HEADSET         │
+                                            │   Real-time Video Stream from Robot    │
+                                            └────────────────────────────────────────┘
